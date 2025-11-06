@@ -1,0 +1,120 @@
+.team {
+  width: 100%;
+  margin-top: 6rem;
+}
+
+.team__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.team__list {
+  width: 100%;
+  padding: 4rem 0 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 3rem;
+
+  transition: all 0.5s ease;
+  will-change: transform;
+}
+
+.team__item {
+  position: relative;
+  padding: 4rem 3.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+
+  border-radius: 4.5rem;
+  border: 1px solid var(--primary);
+  box-shadow: 0px 5px 0px 0px rgba(25, 26, 35, 1);
+  overflow: hidden;
+
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.team__item:nth-child(-n + 4) {
+  display: flex;
+}
+
+.team__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.team__img {
+  flex-shrink: 0;
+  display: block;
+  width: 103px;
+  height: 103px;
+  aspect-ratio: 1/1;
+}
+.team__socials {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+}
+.team__social-link {
+  display: block;
+  width: 3.4rem;
+  height: 3.4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.team__social {
+  width: 3.4rem;
+  height: 3.4rem;
+  fill: black;
+  background-color: var(--accent);
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+  &:hover,
+  &:focus {
+    background-color: white;
+  }
+}
+.team__info {
+  margin-right: 3.4rem;
+}
+.team__line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary);
+}
+.team__btn {
+  width: 100%;
+}
+
+@include mobile-above {
+  .team__item:nth-child(-n + 6) {
+    display: flex;
+  }
+  .team__btn {
+    display: flex;
+    margin-left: auto;
+    max-width: 26.9rem;
+    justify-content: center;
+  }
+}
+@include tablet-above {
+  .team__header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+    gap: 4rem;
+  }
+  .team__header-text {
+    max-width: 47.3rem;
+  }
+}
