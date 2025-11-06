@@ -1,0 +1,21 @@
+.heading {
+  text-transform: capitalize;
+}
+
+.cloud {
+  & {
+    display: inline;
+
+    border-radius: 0.7rem;
+    padding-inline: 0.7rem;
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  &_white {
+    background: white;
+  }
+  &_accent {
+    background: var(--accent);
+  }
+}
