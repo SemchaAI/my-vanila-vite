@@ -1,0 +1,160 @@
+.work {
+  width: 100%;
+  margin-top: 8rem;
+}
+.work__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.work__header-title {
+  width: fit-content;
+  word-break: word;
+  text-align: center;
+}
+.work__header-text {
+  max-width: 100%;
+  text-align: center;
+}
+
+.work__list {
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.accordion__item {
+  padding: 3rem;
+  border-radius: 4.5rem;
+  overflow: hidden;
+
+  transition: background 0.3s;
+  background: var(--secondary);
+  border: 1px solid var(--primary);
+  box-shadow: 0px 5px 0px 0px rgba(25, 26, 35, 1);
+}
+
+.accordion__item.active {
+  background: var(--accent);
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+.accordion__header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3.3rem;
+}
+
+.accordion__number {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.accordion__heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.accordion__toggle {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  font-size: 2.8rem;
+  line-height: 1;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  background-color: var(--secondary);
+}
+
+.accordion__toggle:hover {
+  background: var(--accent);
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+.accordion__line {
+  margin-top: 1.5rem;
+
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary);
+}
+.accordion__text {
+  margin-top: 1.5rem;
+}
+
+.accordion__item.active .accordion__content {
+  max-height: 200px;
+}
+.mobile-br {
+  display: none;
+}
+
+@include mobile-above {
+  .mobile-br {
+    display: inline;
+  }
+  .work__list {
+    margin-top: 6rem;
+    gap: 3rem;
+  }
+}
+@include tablet-above {
+  .work__header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 4rem;
+  }
+  .work__header-text {
+    text-align: left;
+    max-width: 29.5rem;
+  }
+
+  .accordion__item {
+    padding: 4.1rem 6rem;
+  }
+  .accordion__header-wrapper {
+    gap: 2.5rem;
+  }
+  .accordion__number {
+    font-size: 6rem;
+  }
+  .accordion__heading {
+    font-size: 3rem;
+  }
+
+  .accordion__toggle {
+    width: 5.8rem;
+    height: 5.8rem;
+
+    font-size: 5.6rem;
+  }
+
+  .accordion__line {
+    margin-top: 3rem;
+  }
+  .accordion__text {
+    margin-top: 3rem;
+  }
+}
