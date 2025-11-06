@@ -1,0 +1,65 @@
+@use "sass:math";
+
+$desktop-above: 1281px;
+$desktop: 1280px;
+
+$tablet-above: 1024px;
+$tablet: 1023px;
+
+$mobile-above: 768px;
+$mobile: 767px;
+
+$mobile-s-above: 481px;
+$mobile-s: 480px;
+
+@mixin fluid-text($max: 4.8, $min: 1.6) {
+  font-size: clamp(#{$min}rem, #{calc($max / 144) * 100}vw, #{$max}rem);
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin container() {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin desktop-above {
+  @media screen and (min-width: $desktop-above) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin tablet-above {
+  @media screen and (min-width: $tablet-above) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin mobile-above {
+  @media screen and (min-width: $mobile-above) {
+    @content;
+  }
+}
+@mixin mobile-s-above {
+  @media screen and (min-width: $mobile-s-above) {
+    @content;
+  }
+}

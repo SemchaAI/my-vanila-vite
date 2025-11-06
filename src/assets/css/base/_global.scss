@@ -1,0 +1,112 @@
+button::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* inputs */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus {
+  /* transition: background-color 9999s ease-out, color 9999s ease-out; */
+  /* caret-color: transparent; */
+  caret-color: var(--primary);
+  -webkit-box-shadow: 0 0 0 1000px var(--primary) inset;
+  -webkit-text-fill-color: white;
+}
+
+/* TYPO SIZES START */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  @include fluid-text(6, 4.3);
+}
+
+h2,
+.h2 {
+  @include fluid-text(4, 3.6);
+}
+
+h3,
+.h3 {
+  @include fluid-text(3, 2.6);
+}
+
+h4,
+.h4 {
+  @include fluid-text(2, 1.8);
+}
+p,
+.p {
+  margin: 0;
+  @include fluid-text(1.8, 1.6);
+}
+
+html {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 10px;
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  /* typo */
+  font-family: var(--SpaceGrotesk);
+  font-weight: var(--font-weight-base);
+  font-size: var(--font-size-base);
+  line-height: 1.28;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color */
+  background: white;
+  color: black;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

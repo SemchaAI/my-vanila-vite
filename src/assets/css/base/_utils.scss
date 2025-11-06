@@ -1,0 +1,57 @@
+[class*="__container"] {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.hidden {
+  // display: none !important;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.scrollControl {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: var(--z-overlay);
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.line {
+  display: none;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 219.189 / 35.252;
+
+  transition: fill 0.3s ease;
+}
+
+@include tablet-above {
+  .line {
+    display: block;
+    width: 5rem;
+    height: 0.5rem;
+    background-color: var(--accent);
+  }
+}

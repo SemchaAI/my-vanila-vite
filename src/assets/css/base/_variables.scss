@@ -1,0 +1,38 @@
+:root {
+  /* color */
+  --accent: #b9ff66;
+  --primary: #191a23;
+  --secondary: #f3f3f3;
+  --primary-light: #292a32;
+
+  /* typo */
+  --SpaceGrotesk: "Space Grotesk", sans-serif;
+  --font-size-base: 10px;
+  --font-weight-base: 400;
+  --font-weight-medium: 500;
+
+  /* sizes */
+  --size-h1: 6rem;
+  --size-h2: 4rem;
+  --size-h3: 3rem;
+  --size-h4: 2rem;
+
+  --size-h1-mob: 4.3rem;
+  --size-h2-mob: 3.6rem;
+  --size-h3-mob: 2.6rem;
+  --size-h4-mob: 1.8rem;
+
+  --size-p: 1.8rem;
+  --size-p-mob: 1.6rem;
+
+  --size-btn: 2rem;
+
+  /* container layout */
+  --container-width: 1240px;
+  --container-padding-x: 20px;
+
+  /* z-index */
+  --z-header: 11;
+  --z-mobile-menu: 11;
+  --z-overlay: 10; /* lower than mobile menu */
+}
