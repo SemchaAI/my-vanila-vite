@@ -1,4 +1,5 @@
 import "@/assets/css/base/_normalize.scss";
+import "@/assets/css/base/_variables.scss";
 import "@/assets/css/base/_fonts.scss";
 import "@/assets/css/base/_animations.scss";
 import "@/assets/css/base/_utils.scss";
